@@ -9,6 +9,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+//References:
+//https://www.youtube.com/watch?v=VuXbEb5ywrU
+//https://www.javacodex.com/Sorting/Bucket-Sort
+//https://www.growingwiththeweb.com/2015/06/bucket-sort.html
+//https://www.programiz.com/dsa/bucket-sort
 /**
  *
  * @author anastasios
