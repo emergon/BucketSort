@@ -20,11 +20,13 @@ public class BucketSort {
      */
     public static void main(String[] args) {
         Integer[] data = {4, 3, 4, 5, 6, 9, 1, 5, 3, 3, 45, 23, 45, 11, 77, 45, 23};
+        int[] data2 = {4, 3, 4, 5, 6, 9, 1, 5, 3, 3, 45, 23, 45, 11, 77, 45, 23};
+        sort(data2, 77);
         //int size = data.length;
         //BucketSort bs = new BucketSort();
-        sort(data, 3);
+        //sort(data, 3);
         //bs.bucketSort(data, size);
-        System.out.println("Sorted Array in Ascending Order: " + Arrays.toString(data));
+        System.out.println("Sorted Array in Ascending Order: " + Arrays.toString(data2));
     }
 
     private static final int DEFAULT_BUCKET_SIZE = 5;
@@ -90,6 +92,30 @@ public class BucketSort {
 //            }
 //        }
 //    }
+    public static void sort(int[] a, int maxVal) {
+        int[] bucket = new int[maxVal + 1];
+
+        for (int i = 0; i < bucket.length; i++) {
+            bucket[i] = 0;
+        }
+        System.out.println("bucket11:"+Arrays.toString(bucket));
+        System.out.println("aaaaa111:"+Arrays.toString(a));
+        for (int i = 0; i < a.length; i++) {
+            bucket[a[i]]++;
+        }
+System.out.println("bucket22:"+Arrays.toString(bucket));
+        int outPos = 0;
+        for (int i = 0; i < bucket.length; i++) {
+            System.out.println("i:" + i);
+            System.out.println("bucket[i]="+bucket[i]);
+            for (int j = 0; j < bucket[i]; j++) {
+                System.out.println("i:" + i + ",j:" + j);
+                System.out.println("outPos:"+outPos);
+                a[outPos++] = i;
+
+            }
+        }
+    }
 }
 
 class InsertionSort {
