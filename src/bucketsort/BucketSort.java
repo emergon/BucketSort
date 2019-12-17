@@ -98,21 +98,15 @@ public class BucketSort {
         for (int i = 0; i < bucket.length; i++) {
             bucket[i] = 0;
         }
-        System.out.println("bucket11:"+Arrays.toString(bucket));
-        System.out.println("aaaaa111:"+Arrays.toString(a));
         for (int i = 0; i < a.length; i++) {
             bucket[a[i]]++;
         }
-System.out.println("bucket22:"+Arrays.toString(bucket));
-        int outPos = 0;
-        for (int i = 0; i < bucket.length; i++) {
-            System.out.println("i:" + i);
-            System.out.println("bucket[i]="+bucket[i]);
-            for (int j = 0; j < bucket[i]; j++) {
-                System.out.println("i:" + i + ",j:" + j);
-                System.out.println("outPos:"+outPos);
-                a[outPos++] = i;
 
+        int numberToGetInTheArray = 0;
+        for (int i = 0; i < bucket.length; i++) {
+            for (int j = 0; j < bucket[i]; j++) {
+                a[numberToGetInTheArray] = i;
+                numberToGetInTheArray++;
             }
         }
     }
